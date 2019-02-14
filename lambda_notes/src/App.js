@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import styled from 'styled-components';
+
+
+const EverythingBox = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 850px;
+  height:100%;
+  border: 1.5px solid gray;
+  
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <EverythingBox>
+          <Route exact path ="/" component={GetNViewNotes} />
+          <Route exact path ="/note/:id" component={ViewNotePage} />
+          <Route exact path ="/" component={CreateNewOnes} />
+          <Route exact path ="/" component={ViewGetNEdit} />
+          <Route exact path ="/" component={DeleteModalPage} />
+        </EverythingBox>
+      </Router>
     );
   }
 }
