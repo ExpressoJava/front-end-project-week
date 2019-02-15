@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import './App.css';
-
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import styled from 'styled-components';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import styled from 'styled-components'
+import GetNViewNotes from './components/GetNViewNotes'
+import ViewNotePage from './components/ViewNotePage'
 
 
 const EverythingBox = styled.div`
@@ -23,10 +23,10 @@ class App extends Component {
       <Router>
         <EverythingBox>
           <Route exact path ="/" component={GetNViewNotes} />
-          <Route exact path ="/note/:id" component={ViewNotePage} />
-          <Route exact path ="/" component={CreateNewOnes} />
-          <Route exact path ="/" component={ViewGetNEdit} />
-          <Route exact path ="/" component={DeleteModalPage} />
+          {/* <Route exact path ="/note/:id" component={ViewNotePage} />
+          <Route exact path ="/noteForm" component={CreateNewOnes} />
+          <Route exact path ="/note/edit/:id" component={ViewGetNEdit} />
+          <Route exact path ="/delete/:id" component={DeleteModalPage} /> */}
         </EverythingBox>
       </Router>
     );
@@ -34,3 +34,5 @@ class App extends Component {
 }
 
 export default App;
+
+
