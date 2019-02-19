@@ -58,11 +58,13 @@ const EachNoteText = styled.p`
   color: darkgray;
 `;
 
+
+
 class GetNViewNotes extends Component {
     constructor() {
         super();
         this.state = {
-            notes: []
+            notes: [],
         }
     }
 
