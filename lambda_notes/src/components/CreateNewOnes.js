@@ -53,19 +53,16 @@ const Btn = styled.button`
   }
 `;
 
-
-
-
 class CreateNewOnes extends Component {
   constructor() {
     super()
     this.state = {
       title: '',
       textBody: ''
-
-
     }
   }
+
+
 
   handleChange = e => {
     this.setState({
@@ -116,6 +113,9 @@ class CreateNewOnes extends Component {
 }
 
 export default CreateNewOnes;
+
+
+
 
 
 

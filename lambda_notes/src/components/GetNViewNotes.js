@@ -62,10 +62,10 @@ const EachNoteText = styled.p`
 
 class GetNViewNotes extends Component {
     constructor() {
-        super();
-        this.state = {
-            notes: [],
-        }
+      super();
+      this.state = {
+      notes: [],
+      }
     }
 
     componentDidMount() {

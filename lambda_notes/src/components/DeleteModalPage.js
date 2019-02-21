@@ -1,32 +1,32 @@
-import React from 'react'
+import React,{ Component } from 'react'
 import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap'
 import axios from 'axios'
 // import { Link } from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 
 
 
 
 
-class DeleteModalPage extends React.Component {
+class DeleteModalPage extends Component {
+    // constructor(props) {
+    //     super(props);
+    // }
 
-    deleteThisNote = e => {
-        e.preventDefault();
+    deleteThisNote = () => {
+        
+        // e.preventDefault();
         axios
         .delete(`https://fe-notes.herokuapp.com/note/delete/${this.props.id}`)
         .then(response => {
-        this.setState({ note: response.data });
-        window.location.reload();
+           console.log(response)
+        // this.setState({ note: response.data });
+        this.props.history.push('/');
         })
         .catch(err => console.log(err))
     };
 
-//   componentDidUpdate(prevState) {
-//     if (this.props.updating !== prevState.updating) {
-//       if (!this.props.updating) {
-//         this.getNote();
-//       }
-//     }
-//   }
+
 
   render() {
     return (
@@ -52,4 +52,4 @@ class DeleteModalPage extends React.Component {
   }
 }
 
-export default DeleteModalPage;
+export default withRouter(DeleteModalPage);

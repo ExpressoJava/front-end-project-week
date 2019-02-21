@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import styled from 'styled-components'
 import GetNViewNotes from './components/GetNViewNotes'
 import ViewNotePage from './components/ViewNotePage'
@@ -24,7 +24,7 @@ const EverythingBox = styled.div`
 class App extends Component {
   render() {
     return (
-      <Router>
+      
         <EverythingBox>
           <NavPannel />
 
@@ -34,7 +34,7 @@ class App extends Component {
           <Route exact path="/note/edit/:id" component={ViewGetNEdit} />
           <Route exact path="/note/delete/:id" component={DeleteModalPage} />
         </EverythingBox>
-      </Router>
+    
     );
   }
 }
