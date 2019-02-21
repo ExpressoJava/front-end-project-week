@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import axios from 'axios'
 
 
-
-
 const CreateViewWrapper = styled.div`
 width: 75%
 max-width: 600px;
@@ -27,7 +25,8 @@ const TitleInput = styled.input`
   border: 2px solid #B7B7B7
   background: white;
 `;
-const ContentInput = styled.input`
+// using style.textarea vs. styled.input
+const ContentInput = styled.textarea`
   width: 91%;
   max-width: 605px;
   height: 348px;
@@ -36,6 +35,9 @@ const ContentInput = styled.input`
   border: 2px solid #B7B7B7
   background: white;
 `;
+
+
+
 
 const Btn = styled.button`
   width: 100%;
@@ -113,6 +115,8 @@ class CreateNewOnes extends Component {
 }
 
 export default CreateNewOnes;
+
+
 
 
 

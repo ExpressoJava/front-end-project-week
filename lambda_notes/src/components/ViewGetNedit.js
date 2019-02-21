@@ -24,7 +24,7 @@ export const TitleInput = styled.input`
   border: 2px solid #B7B7B7
   background: white;
 `;
-export const ContentInput = styled.input`
+export const ContentInput = styled.textarea`
   width: 91%;
   max-width: 605px;
   height: 348px;
