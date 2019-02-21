@@ -1,24 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 
 
-// ReactDOM.render(
-// <Router>
-//     <App />
-// </Router>, 
-//     document.getElementById('root'))
+ReactDOM.render(
+<Router>
+    <App />
+</Router>, 
+document.getElementById('root')
+)
 
-    ReactDOM.render(
+    // ReactDOM.render(
         
-            <App />
-        , 
-            document.getElementById('root'));
+    //         <App />
+    //     , 
+    //         document.getElementById('root'));
 
 
 

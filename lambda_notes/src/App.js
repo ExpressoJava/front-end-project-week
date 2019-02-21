@@ -7,6 +7,7 @@ import ViewNotePage from './components/ViewNotePage'
 import NavPannel from './components/NavPannel'
 import DeleteModalPage from './components/DeleteModalPage'
 import ViewGetNEdit from './components/ViewGetNEdit'
+import CreateNewOnes from './components/CreateNewOnes'
 
 
 const EverythingBox = styled.div`
@@ -29,8 +30,8 @@ class App extends Component {
 
           <Route exact path="/" component={GetNViewNotes} />
           <Route exact path="/note/:id" component={ViewNotePage} /> 
-          {/* <Route exact path ="/noteForm" component={CreateNewOnes} /> */}
-          <Route exact path ="/note/edit/:id" component={ViewGetNEdit} />
+          <Route exact path ="/noteForm" component={CreateNewOnes} />
+          <Route exact path="/note/edit/:id" component={ViewGetNEdit} />
           <Route exact path="/note/delete/:id" component={DeleteModalPage} />
         </EverythingBox>
       </Router>
